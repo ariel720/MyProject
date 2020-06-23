@@ -1,5 +1,7 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h2= name
+    |Hello. This is user's page for   
+    strong= name
+  include partials/footer 
