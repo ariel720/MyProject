@@ -3,21 +3,55 @@ extends layout
 block content
   include partials/header  
   div.container
-      h2(style='text-align:center') Checkout My Projects
+      .row
+        .col-sm-4
+          h2 About Me
+          h5 Photo of me:
+          img(src='/images/profile.png' alt='shinhee' style='width:100%')
+          p Some text about me in culpa qui officia deserunt mollit anim..
+          h3 More Links
+          p Click below pages
+          ul.nav.nav-pills.nav-stacked
+            li.active
+              a(href='/service') Service
+            li
+              a(href='/projects') Projects
+            li
+              a(href='/contact') Contact me
+          hr.hidden-sm.hidden-md.hidden-lg
+        .col-sm-8
+          h2 Service
+          h5 Latest update, Dec 7, 2017
+          .fakeimg Fake Image
+          p Some text..
+          p
+            | Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+          br
+          h2 Projects
+          h5 Latest update, Sep 2, 2017
+          img(src='https://www.w3schools.com/w3images/ocean.jpg' style='width:100%')
+          p Check out my photograph projects
+          p
+            | Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+
+
+
+
+      h2(style='text-align:center') My Life
       p(style='text-align:center') London Paris Tokyo Oslo
       p 
       #London.tabcontent.active
         h1 London
-        p My Project in London
+        p My Life in London
       #Paris.tabcontent
         h1 Paris
-        p My Project in Paris
+        p My Life in Paris
       #Tokyo.tabcontent
         h1 Tokyo
-        p My Project in Tokyo
+        p My Life in Tokyo
       #Oslo.tabcontent
         h1 Oslo
-        p My Project in Oslo
+        p My Life in Oslo
       button#defaultOpen.tablink(onclick="openCity('London', this, 'red')") London
       button.tablink(onclick="openCity('Paris', this, 'green')") Paris
       button.tablink(onclick="openCity('Tokyo', this, 'blue')") Tokyo
@@ -72,39 +106,6 @@ block content
           div 20
 
       
-      p 
-      h2(style='text-align:center') Service Pricing Tables
-      p(style='text-align:center') Resize the browser window to see the effect.
-      .columns
-        ul.price
-          li.header Basic
-          li.grey $ 9.99 / year
-          li 10GB Storage
-          li 10 Emails
-          li 10 Domains
-          li 1GB Bandwidth
-          li.grey
-            a.button(href='#') Sign Up
-      .columns
-        ul.price
-          li.header(style='background-color:#4CAF50') Pro
-          li.grey $ 24.99 / year
-          li 25GB Storage
-          li 25 Emails
-          li 25 Domains
-          li 2GB Bandwidth
-          li.grey
-            a.button(href='#') Sign Up
-      .columns
-        ul.price
-          li.header Premium
-          li.grey $ 49.99 / year
-          li 50GB Storage
-          li 50 Emails
-          li 50 Domains
-          li 5GB Bandwidth
-          li.grey
-            a.button(href='#') Sign Up
     
 
 
