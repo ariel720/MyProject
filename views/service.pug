@@ -3,24 +3,47 @@ extends layout
 block content
   include partials/header  
   div.container
-    p Welcome to #{title}
-    |Hello. This is user's page 
+      p 
+      h2(style='text-align:center') Service Pricing Tables
+      p(style='text-align:center') Resize the browser window to see the effect.
+      .columns
+        ul.price
+          li.header Basic
+          li.grey $ 9.99 / year
+          li 10GB Storage
+          li 10 Emails
+          li 10 Domains
+          li 1GB Bandwidth
+          li.grey
+            a.button(href='#') Sign Up
+      .columns
+        ul.price
+          li.header(style='background-color:#4CAF50') Pro
+          li.grey $ 24.99 / year
+          li 25GB Storage
+          li 25 Emails
+          li 25 Domains
+          li 2GB Bandwidth
+          li.grey
+            a.button(href='#') Sign Up
+      .columns
+        ul.price
+          li.header Premium
+          li.grey $ 49.99 / year
+          li 50GB Storage
+          li 50 Emails
+          li 50 Domains
+          li 5GB Bandwidth
+          li.grey
+            a.button(href='#') Sign Up
 
-    h1 Pug - node template engine
-    #container.col
-      if youAreUsingPug
-        p You are amazing
-      else
-        p Get on it!
-      p.
-        Pug is a terse and simple templating language with a
-        strong focus on performance and powerful features.
-      a.class#ID(href = '#')
-        |multiple lines of html code. 
-        |see! 
-        |Here!   
-      br.
-      input.
+      
+
+    
+
+
+
+
 
 
   include partials/footer

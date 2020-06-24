@@ -3,24 +3,21 @@ extends layout
 block content
   include partials/header  
   div.container
-    p Welcome to #{title}
-    |Hello. This is user's page 
-
-    h1 Pug - node template engine
-    #container.col
-      if youAreUsingPug
-        p You are amazing
-      else
-        p Get on it!
-      p.
-        Pug is a terse and simple templating language with a
-        strong focus on performance and powerful features.
-      a.class#ID(href = '#')
-        |multiple lines of html code. 
-        |see! 
-        |Here!   
-      br.
-      input.
+    .card
+      img(src='/images/profile.png' alt='shinhee' style='width:100%')
+      h1 Shinhee Kim
+      p.title  Developer &amp; Photographer
+      p Georgian College
+      div(style='margin: 24px 0;')
+        p Check out my social network pages 
+        a(href='https://www.instagram.com/ariel1023/?hl=en')
+          i.fa.fa-instagram.a_prifile
+        a(href='https://www.linkedin.com/in/shinhee-kim-30a62963/')
+          i.fa.fa-linkedin.a_prifile
+        a(href='https://www.facebook.com/ariel720')
+          i.fa.fa-facebook.a_prifile
+      p
+        button.btn_profile Contact
 
 
   include partials/footer

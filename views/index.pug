@@ -1,26 +1,115 @@
 extends layout
 
-
 block content
   include partials/header  
   div.container
-    |Hello. This is user's page 
+      h2(style='text-align:center') Checkout My Projects
+      p(style='text-align:center') London Paris Tokyo Oslo
+      p 
+      #London.tabcontent.active
+        h1 London
+        p My Project in London
+      #Paris.tabcontent
+        h1 Paris
+        p My Project in Paris
+      #Tokyo.tabcontent
+        h1 Tokyo
+        p My Project in Tokyo
+      #Oslo.tabcontent
+        h1 Oslo
+        p My Project in Oslo
+      button#defaultOpen.tablink(onclick="openCity('London', this, 'red')") London
+      button.tablink(onclick="openCity('Paris', this, 'green')") Paris
+      button.tablink(onclick="openCity('Tokyo', this, 'blue')") Tokyo
+      button.tablink(onclick="openCity('Oslo', this, 'orange')") Oslo
+     
+      p 
+      h2(style='text-align:center') Visitor Rating
+      p(style='text-align:center') 4.1 average based on 254 reviews.
+      span.heading Visitor Rating
+      span.fa.fa-star.checked
+      span.fa.fa-star.checked
+      span.fa.fa-star.checked
+      span.fa.fa-star.checked
+      span.fa.fa-star
+      
+      hr(style='border:3px solid #f1f1f1')
+      .row
+        .side
+          div 5 star
+        .middle
+          .bar-container
+            .bar-5
+        .side.right
+          div 150
+        .side
+          div 4 star
+        .middle
+          .bar-container
+            .bar-4
+        .side.right
+          div 63
+        .side
+          div 3 star
+        .middle
+          .bar-container
+            .bar-3
+        .side.right
+          div 15
+        .side
+          div 2 star
+        .middle
+          .bar-container
+            .bar-2
+        .side.right
+          div 6
+        .side
+          div 1 star
+        .middle
+          .bar-container
+            .bar-1
+        .side.right
+          div 20
 
-    h1 Pug - node template engine
-    #container.col
-      if youAreUsingPug
-        p You are amazing
-      else
-        p Get on it!
-      p.
-        Pug is a terse and simple templating language with a
-        strong focus on performance and powerful features.
-      a.class#ID(href = '#')
-        |multiple lines of html code. 
-        |see! 
-        |Here!   
-      br.
-      input.
+      
+      p 
+      h2(style='text-align:center') Service Pricing Tables
+      p(style='text-align:center') Resize the browser window to see the effect.
+      .columns
+        ul.price
+          li.header Basic
+          li.grey $ 9.99 / year
+          li 10GB Storage
+          li 10 Emails
+          li 10 Domains
+          li 1GB Bandwidth
+          li.grey
+            a.button(href='#') Sign Up
+      .columns
+        ul.price
+          li.header(style='background-color:#4CAF50') Pro
+          li.grey $ 24.99 / year
+          li 25GB Storage
+          li 25 Emails
+          li 25 Domains
+          li 2GB Bandwidth
+          li.grey
+            a.button(href='#') Sign Up
+      .columns
+        ul.price
+          li.header Premium
+          li.grey $ 49.99 / year
+          li 50GB Storage
+          li 50 Emails
+          li 50 Domains
+          li 5GB Bandwidth
+          li.grey
+            a.button(href='#') Sign Up
+    
+
+
+
+
 
 
   include partials/footer
