@@ -1,4 +1,14 @@
-// ===========project=======
+/*
+Shinhee Kim
+200394763
+2020-07-06
+*/
+
+
+ /*======project======
+ responsive image grid
+ https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_image_gallery
+ */
 function openCity(cityName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
